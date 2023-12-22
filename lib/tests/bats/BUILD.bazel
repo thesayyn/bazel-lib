@@ -48,6 +48,9 @@ bats_test(
     srcs = [
         "additional_lib.bats",
     ],
+    tags = [
+        "exclusive",
+    ],
     target_compatible_with = select({
         # TODO(thesayyn): incompatible with bzlmod
         "@aspect_bazel_lib//lib:bzlmod": ["@platforms//:incompatible"],
